@@ -1,0 +1,22 @@
+DEBUG_FLAGS = //Zi //W3 //Od //Fdvc142.pdb //JMC //nologo //Gs //Gy //DEBUG:FASTLINK //MP
+PERF_FLAGS = -O3
+
+CC = cl
+CXXFLAGS = //std:c++17 //EHsc
+
+TARGET = ./aoc2015.exe
+OBJ_DIR = ./obj
+DEPS = src/*.h \
+	   src/*.hpp
+#SRC = $(wildcard src/*.cpp)
+SRC = src/*.cpp
+
+$(TARGET): $(SRC) $(DEPS)
+	$(CC) $(CXXFLAGS) $(DEBUG_FLAGS) //Fo: $(OBJ_DIR)/ //Fe: $(TARGET) $(SRC)
+
+.PHONY: clean
+
+all:  $(TARGET)
+
+clean:
+	-$(RM) -f $(OBJ_DIR)/*.obj *.obj *.exe *.ilk *.pdb

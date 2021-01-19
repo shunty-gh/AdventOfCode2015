@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "*.exe": true,
+        "*.obj": true,
+        "*.ilk": true,
+        "*.pdb": true
+    },
+    "cmake.configureOnOpen": false
+}

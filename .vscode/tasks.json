@@ -1,0 +1,98 @@
+{
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "make",
+        "command": "make",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build"
+      },
+      {
+        "type": "cppbuild",
+        "label": "MSVC++ build project",
+        "command": "cl.exe",
+        "args": [
+          "/Zi",
+          "/W3",
+          "/Od",
+          "/JMC",
+          "/EHsc",
+          "/DEBUG:FASTLINK",
+          "/MP",
+          "/Fdvc142.pdb",
+          "/nologo", //Gs
+          "/Gy",
+          "/Fe:",
+          "${workspaceFolder}/aoc2015.exe",
+          "src/*.cpp"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [
+          "$msCompile"
+        ],
+        "group": "build",
+        "detail": "Build with MSVC"
+      },
+      {
+        "type": "shell",
+        "label": "g++ build project",
+        "windows": {
+          "command": "g++.exe",
+          "args": [
+            "-std=c++17",
+            "-g",
+            "-Wall",
+            "src/*.cpp",
+            "-o",
+            "${workspaceFolder}/aoc2015.exe"
+          ]
+        },
+        "linux": {
+          "command": "/usr/bin/g++",
+          "args": [
+            "-std=c++17",
+            "-g",
+            "-Wall",
+            "src/*.cpp",
+            "-o",
+            "${workspaceFolder}/aoc2015"
+          ]
+        },
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build"
+      },
+      {
+        "type": "cppbuild",
+        "label": "clang++ build project",
+        "command": "/usr/bin/clang++",
+        "args": [
+          "-g",
+          "src/*.cpp",
+          "-o",
+          "${workspaceFolder}/aoc2015"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [
+          "$gcc"
+        ],
+        "group": "build",
+        "detail": "compiler: /usr/bin/clang++"
+      }
+    ],
+    "version": "2.0.0"
+}
