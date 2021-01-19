@@ -2,7 +2,7 @@
     "tasks": [
       {
         "type": "shell",
-        "label": "make",
+        "label": "make (GCC)",
         "command": "make",
         "args": [],
         "options": {
@@ -10,6 +10,19 @@
         },
         "problemMatcher": [
           "$gcc"
+        ],
+        "group": "build"
+      },
+      {
+        "type": "shell",
+        "label": "make (MSVC)",
+        "command": "make",
+        "args": [ "-f", "Makefile.msvc" ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [
+          "$msCompile"
         ],
         "group": "build"
       },

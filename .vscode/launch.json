@@ -61,7 +61,8 @@
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "preLaunchTask": "MSVC++ build project"
+            //"preLaunchTask": "MSVC++ build project"
+            "preLaunchTask": "make (MSVC)"
         }
     ]
 }
