@@ -60,7 +60,7 @@ aoc_result_t day25();
 
 void getInputLines(int, bool, const std::function<void (std::string)>&);
 std::vector<std::string> getInputLines(int, bool);
-
+std::vector<int> getInputInts(int dayNumber, bool test);
 
 // ANSI Colours
 // Colours on https://ss64.com/nt/syntax-ansi.html

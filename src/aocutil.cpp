@@ -27,3 +27,9 @@ std::vector<std::string> getInputLines(int dayNumber, bool test = false) {
     getInputLines(dayNumber, test, [&result](std::string line) { result.push_back(line); });
     return result;
 }
+
+std::vector<int> getInputInts(int dayNumber, bool test) {
+    std::vector<int> result;
+    getInputLines(dayNumber, test, [&result](std::string line) { result.push_back(std::stoi(line)); });
+    return result;
+}
