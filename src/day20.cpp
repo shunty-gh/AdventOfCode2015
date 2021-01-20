@@ -6,27 +6,35 @@ const int TargetBy11 = Target / 11;
 
 aoc_result_t day20() {
     int part1 = 0, part2 = 0;
-    for (int i = 1; part1 == 0 || part2 == 0 ; i++) {
-        auto&& [sum, factors] = factorsOfAndSum(i);
-        if (sum >= TargetBy10) {
-            if (part1 == 0) {
-                part1 = i;
-            }
 
-            if (part2 == 0 && (sum >= TargetBy11)) {
-                // Need to sum without the elves that have stopped delivering
-                int esum = 0;
-                for (auto &&x: factors) {
-                    if ((x * 50) < i) {
-                        continue;
-                    }
-                    esum += x;
-                }
+    // Part 1
+    std::vector<int> houses(TargetBy10 + 1, 0);
 
-                if (esum >= TargetBy11) {
-                    part2 = i;
-                }
-            }
+    for (int elf = 1; elf <= TargetBy10; elf++) {
+        for (int house = elf; house <= TargetBy10; house += elf) {
+            houses[house] += elf;
+        }
+    }
+    for (int i = 1; i <= TargetBy10; i++) {
+        if (houses[i] >= TargetBy10) {
+            part1 = i;
+            break;
+        }
+    }
+
+    // Part 2
+    std::vector<int> houses2(TargetBy11 + 1, 0);
+
+    for (int elf = 1; elf <= TargetBy11; elf++) {
+        int visited = 0;
+        for (int house = elf; house <= TargetBy11 && visited < 50; house += elf, visited++) {
+            houses2[house] += elf;
+        }
+    }
+    for (int i = 1; i <= TargetBy11; i++) {
+        if (houses2[i] >= TargetBy11) {
+            part2 = i;
+            break;
         }
     }
 
