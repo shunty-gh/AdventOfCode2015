@@ -1,3 +1,4 @@
+#include <chrono>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -42,9 +43,12 @@ int main(int argc, const char* argv[]) {
         auto &dayFn = aocDays[day - 1];
         if (!dayFn.fn) continue;
 
+        auto begin = std::chrono::high_resolution_clock::now();
         auto result = dayFn.fn();
+        auto end = std::chrono::high_resolution_clock::now();
+        auto ms =std::chrono::duration_cast<std::chrono::milliseconds>(end-begin).count();
 
-        std::cout << BLUE << "Day " << day << RESET << "\n";
+        std::cout << BLUE << "Day " << day << " " << YELLOW << "(" << ms << "ms)" <<  RESET << "\n";
         std::cout << "  Part 1: " << YELLOW << result.answer[0] << RESET << "\n";
         std::cout << "  Part 2: " << YELLOW << result.answer[1] << RESET << "\n";
     }
