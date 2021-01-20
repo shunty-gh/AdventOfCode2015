@@ -1,5 +1,5 @@
 DEBUG_FLAGS = //Zi //W3 //Od //Fdvc142.pdb //JMC //nologo //Gs //Gy //DEBUG:FASTLINK //MP
-PERF_FLAGS = -O3
+PERF_FLAGS = //O2 //MP //nologo
 
 CC = cl
 CXXFLAGS = //std:c++17 //EHsc
@@ -17,6 +17,9 @@ $(TARGET): $(SRC) $(DEPS)
 .PHONY: clean
 
 all:  $(TARGET)
+
+release:
+	$(CC) $(CXXFLAGS) $(PERF_FLAGS) //Fo: $(OBJ_DIR)/ //Fe: $(TARGET) $(SRC)
 
 clean:
 	-$(RM) -f $(OBJ_DIR)/*.obj *.obj *.exe *.ilk *.pdb
