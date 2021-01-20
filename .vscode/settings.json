@@ -3,7 +3,8 @@
         "*.exe": true,
         "*.obj": true,
         "*.ilk": true,
-        "*.pdb": true
+        "*.pdb": true,
+        "obj/*.obj": true,
     },
     "cmake.configureOnOpen": false
 }
