@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "aoc2015.h"
+#include "aocutil.h"
 #include "ezOptionParser.hpp"
 
 static const std::vector<aoc_t> aocDays = {
@@ -67,7 +67,6 @@ aoc_result_t day11() { return {0,0}; }
 aoc_result_t day12() { return {0,0}; }
 aoc_result_t day14() { return {0,0}; }
 aoc_result_t day19() { return {0,0}; }
-aoc_result_t day20() { return {0,0}; }
 aoc_result_t day21() { return {0,0}; }
 aoc_result_t day22() { return {0,0}; }
 aoc_result_t day23() { return {0,0}; }

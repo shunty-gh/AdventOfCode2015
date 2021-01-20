@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "aoc2015.h"
+#include "aocutil.h"
 
 aoc_result_t day01() {
     return {0,0};

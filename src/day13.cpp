@@ -4,7 +4,7 @@
 #include <stdexcept>
 #include <vector>
 
-#include "aoc2015.h"
+#include "aocutil.h"
 
 // eg: Alice would lose 57 happiness units by sitting next to Bob.
 const std::string Pattern{R"((\w+) would (lose|gain) (\d+) happiness units by sitting next to (\w+)\.)"};

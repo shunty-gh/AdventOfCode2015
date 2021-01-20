@@ -1,7 +1,7 @@
 #include <functional>
 #include <string>
 #include <vector>
-#include "aoc2015.h"
+#include "aocutil.h"
 
 struct State {
     bool Current, Next;

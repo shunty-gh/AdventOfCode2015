@@ -1,7 +1,7 @@
 #include <regex>
 #include <string>
 #include <vector>
-#include "aoc2015.h"
+#include "aocutil.h"
 
 // eg: Sue 27: cars: 0, trees: 8, akitas: 5
 const std::string Pattern{R"(\w+ (\d+): (\w+): (\d+), (\w+): (\d+), (\w+): (\d+).*)"};

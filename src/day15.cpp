@@ -1,7 +1,7 @@
 #include <regex>
 #include <string>
 #include <vector>
-#include "aoc2015.h"
+#include "aocutil.h"
 
 const std::string Pattern{R"((\w+): capacity (-?\d+), durability (-?\d+), flavor (-?\d+), texture (-?\d+), calories (\d+).*)"};
 const std::regex re{Pattern};

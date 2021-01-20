@@ -1,7 +1,7 @@
 #include <queue>
 #include <string>
 #include <vector>
-#include "aoc2015.h"
+#include "aocutil.h"
 
 struct ContainerToTry {
     int Id, CurrentTotal;

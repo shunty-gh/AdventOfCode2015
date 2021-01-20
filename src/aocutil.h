@@ -1,5 +1,5 @@
-#ifndef _AOC2015_H
-#define _AOC2015_H
+#ifndef _AOCUTIL_H
+#define _AOCUTIL_H
 
 #include <array>
 #include <iostream>
@@ -61,6 +61,8 @@ aoc_result_t day25();
 void getInputLines(int, bool, const std::function<void (std::string)>&);
 std::vector<std::string> getInputLines(int, bool);
 std::vector<int> getInputInts(int dayNumber, bool test);
+std::vector<int> factorsOf(int num, bool sort = false);
+std::pair<int, std::vector<int>> factorsOfAndSum(int num, bool sort = false);
 
 // ANSI Colours
 // Colours on https://ss64.com/nt/syntax-ansi.html
