@@ -43,19 +43,26 @@ int main(int argc, const char* argv[]) {
         auto &dayFn = aocDays[day - 1];
         if (!dayFn.fn) continue;
 
-        auto begin = std::chrono::high_resolution_clock::now();
-        auto result = dayFn.fn();
-        auto end = std::chrono::high_resolution_clock::now();
-        auto ms =std::chrono::duration_cast<std::chrono::milliseconds>(end-begin).count();
-        if (ms > 1) {
-            std::cout << BLUE << "Day " << day << " " << YELLOW << "(" << ms << "ms)" <<  RESET << "\n";
-        } else {
-            ms =std::chrono::duration_cast<std::chrono::microseconds>(end-begin).count();
-            std::cout << BLUE << "Day " << day << " " << YELLOW << "(" << ms << " micro-seconds)" <<  RESET << "\n";
+        try {
+            auto begin = std::chrono::high_resolution_clock::now();
+            auto result = dayFn.fn();
+            auto end = std::chrono::high_resolution_clock::now();
+            auto ms =std::chrono::duration_cast<std::chrono::milliseconds>(end-begin).count();
+            if (ms > 1) {
+                std::cout << BLUE << "Day " << day << " " << YELLOW << "(" << ms << "ms)" <<  RESET << "\n";
+            } else {
+                ms =std::chrono::duration_cast<std::chrono::microseconds>(end-begin).count();
+                std::cout << BLUE << "Day " << day << " " << YELLOW << "(" << ms << " micro-seconds)" <<  RESET << "\n";
+            }
+            std::cout << "  Part 1: " << YELLOW << result.answer[0] << RESET << "\n";
+            std::cout << "  Part 2: " << YELLOW << result.answer[1] << RESET << "\n";
         }
-
-        std::cout << "  Part 1: " << YELLOW << result.answer[0] << RESET << "\n";
-        std::cout << "  Part 2: " << YELLOW << result.answer[1] << RESET << "\n";
+        catch (const std::exception& e) {
+            std::cout << RED << "ERROR " << RESET << "in day " << YELLOW << day << RESET << ": " << e.what() << "\n";
+        }
+        catch (...) {
+            std::cout << RED << "UNKNOWN ERROR " << RESET << "in day " << YELLOW << day << RESET << "\n";
+        }
     }
 }
 
@@ -72,7 +79,5 @@ aoc_result_t day11() { return {0,0}; }
 aoc_result_t day12() { return {0,0}; }
 aoc_result_t day14() { return {0,0}; }
 aoc_result_t day19() { return {0,0}; }
-aoc_result_t day22() { return {0,0}; }
-aoc_result_t day23() { return {0,0}; }
 aoc_result_t day24() { return {0,0}; }
 aoc_result_t day25() { return {0,0}; }
