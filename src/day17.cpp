@@ -11,7 +11,7 @@ struct ContainerToTry {
 const int TargetSize = 150;
 
 aoc_result_t day17() {
-    std::vector<int> input = getInputInts(17, false);
+    std::vector<int> input = get_input_ints(17, false);
 
     std::vector<std::vector<int>> combinations{};
     int isize = input.size();

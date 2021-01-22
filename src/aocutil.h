@@ -60,7 +60,7 @@ aoc_result_t day25();
 
 void get_input_lines(int, bool, const std::function<void (std::string)>&);
 std::vector<std::string> get_input_lines(int, bool);
-std::vector<int> getInputInts(int dayNumber, bool test);
+std::vector<int> get_input_ints(int dayNumber, bool test);
 std::vector<int> factors_of(int num, bool sort = false);
 std::pair<int, std::vector<int>> factors_of_and_sum(int num, bool sort = false);
 
