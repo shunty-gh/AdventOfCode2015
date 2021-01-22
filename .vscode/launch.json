@@ -4,8 +4,22 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
-
+        {
+            "name": "Node: Current file",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}"
+        },
+        {
+            "name": "Python: Current file",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}"
+        },
         {
             "name": "g++.exe Debug",
             "type": "cppdbg",
@@ -35,7 +49,6 @@
             ],
             "preLaunchTask": "g++ build project",
         },
-
         {
             "name": "clang debug project",
             "type": "cppdbg",
@@ -50,13 +63,15 @@
             "miDebuggerPath": "/usr/bin/lldb-mi",
             "preLaunchTask": "clang++ build project",
         },
-
         {
             "name": "MSVC++ Debug project",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/aoc2015.exe",
-            "args": [],
+            "args": [
+                "-d",
+                "19"
+            ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
