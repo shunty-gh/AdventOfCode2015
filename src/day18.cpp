@@ -28,7 +28,7 @@ void update(std::vector<State>&);
 
 aoc_result_t day18() {
     std::vector<State> grid;
-    getInputLines(18, false, [&grid](std::string line) {
+    get_input_lines(18, false, [&grid](std::string line) {
         for (int x = 0; x < (int)line.length(); x++) {
             grid.push_back(State{line[x] == '#'});
         }

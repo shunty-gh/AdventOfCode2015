@@ -47,7 +47,7 @@ const std::vector<int> CompoundsFound {3, 7, 2, 3, 0, 0, 5, 3, 2, 1};
 
 aoc_result_t day16() {
     std::vector<Aunt> aunts;
-    getInputLines(16, false, [&aunts](std::string line) {
+    get_input_lines(16, false, [&aunts](std::string line) {
         std::smatch sm;
         std::regex_match(line, sm, re);
         std::vector<int>(11, -1);

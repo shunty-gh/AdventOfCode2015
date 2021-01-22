@@ -17,7 +17,7 @@ const int TargetCalories = 500;
 aoc_result_t day15() {
 
     std::vector<Ingredient> ingredients{};
-    getInputLines(15, false, [&ingredients](std::string line) {
+    get_input_lines(15, false, [&ingredients](std::string line) {
         std::smatch sm;
         std::regex_match(line, sm, re);
         ingredients.push_back(Ingredient{ sm[1], std::stoi(sm[2]), std::stoi(sm[3]), std::stoi(sm[4]), std::stoi(sm[5]), std::stoi(sm[6])});

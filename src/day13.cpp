@@ -23,7 +23,7 @@ struct DinerToVisit {
 };
 
 std::pair<std::vector<std::string>, std::map<DinerKey, int>> load_diners() {
-    auto lines = getInputLines(13, false);
+    auto lines = get_input_lines(13, false);
     std::map<DinerKey, int> diners{};
     std::vector<std::string> dinerNamesTmp{};
     std::smatch sm;

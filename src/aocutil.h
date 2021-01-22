@@ -58,11 +58,11 @@ aoc_result_t day23();
 aoc_result_t day24();
 aoc_result_t day25();
 
-void getInputLines(int, bool, const std::function<void (std::string)>&);
-std::vector<std::string> getInputLines(int, bool);
+void get_input_lines(int, bool, const std::function<void (std::string)>&);
+std::vector<std::string> get_input_lines(int, bool);
 std::vector<int> getInputInts(int dayNumber, bool test);
-std::vector<int> factorsOf(int num, bool sort = false);
-std::pair<int, std::vector<int>> factorsOfAndSum(int num, bool sort = false);
+std::vector<int> factors_of(int num, bool sort = false);
+std::pair<int, std::vector<int>> factors_of_and_sum(int num, bool sort = false);
 
 // ANSI Colours
 // Colours on https://ss64.com/nt/syntax-ansi.html

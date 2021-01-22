@@ -6,7 +6,7 @@
 #include "aocutil.h"
 
 /** Read input file for day number and apply a lambda to each line */
-void getInputLines(int dayNumber, bool test, const std::function<void (std::string)>& processLine) {
+void get_input_lines(int dayNumber, bool test, const std::function<void (std::string)>& processLine) {
     std::string dn = std::to_string(dayNumber);
     dn = std::string(2 - dn.length(), '0') + dn;
     std::string fn = "./input/day" + dn + (test ?  "-input-test.txt" : "-input.txt");
@@ -22,19 +22,19 @@ void getInputLines(int dayNumber, bool test, const std::function<void (std::stri
 }
 
 /** Read input file for day number and return a vector of strings */
-std::vector<std::string> getInputLines(int dayNumber, bool test = false) {
+std::vector<std::string> get_input_lines(int dayNumber, bool test = false) {
     std::vector<std::string> result;
-    getInputLines(dayNumber, test, [&result](std::string line) { result.push_back(line); });
+    get_input_lines(dayNumber, test, [&result](std::string line) { result.push_back(line); });
     return result;
 }
 
 std::vector<int> getInputInts(int dayNumber, bool test) {
     std::vector<int> result;
-    getInputLines(dayNumber, test, [&result](std::string line) { result.push_back(std::stoi(line)); });
+    get_input_lines(dayNumber, test, [&result](std::string line) { result.push_back(std::stoi(line)); });
     return result;
 }
 
-std::vector<int> factorsOf(int num, bool sort) {
+std::vector<int> factors_of(int num, bool sort) {
     std::vector<int> result{1, num};
 
     int ub = num / 2;
@@ -54,7 +54,7 @@ std::vector<int> factorsOf(int num, bool sort) {
     return result;
 }
 
-std::pair<int, std::vector<int>> factorsOfAndSum(int num, bool sort) {
+std::pair<int, std::vector<int>> factors_of_and_sum(int num, bool sort) {
     int sum = 1 + num;
     std::vector<int> factors{1, num};
 
@@ -76,4 +76,4 @@ std::pair<int, std::vector<int>> factorsOfAndSum(int num, bool sort) {
     return std::make_pair(sum, factors);
 }
 
-std::pair<int, std::vector<int>> factorsOfAndSum(int num) { return factorsOfAndSum(num, false); }
+std::pair<int, std::vector<int>> factors_of_and_sum(int num) { return factors_of_and_sum(num, false); }

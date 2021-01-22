@@ -34,7 +34,7 @@ int run_program(std::vector<Instruction>&, int);
 
 aoc_result_t day23() {
     std::vector<Instruction> instructions{};
-    getInputLines(23, false, [&instructions](std::string line) {
+    get_input_lines(23, false, [&instructions](std::string line) {
         std::smatch sm;
         std::regex_match(line, sm, re);
 
