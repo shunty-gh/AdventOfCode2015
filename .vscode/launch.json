@@ -68,10 +68,7 @@
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/aoc2015.exe",
-            "args": [
-                "-d",
-                "19"
-            ],
+            "args": [ "-d", "24" ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
