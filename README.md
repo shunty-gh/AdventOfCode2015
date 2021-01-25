@@ -1,6 +1,6 @@
 # Advent of Code 2015
 
-Some code to help solve the [Advent of Code 2015](https://adventofcode.com/2015)) problems. The early days were written during the 2015 AoC period but the later ones were done several years later when I decided it was time to finish it all off properly.
+Some code to help solve the [Advent of Code 2015](https://adventofcode.com/2015) problems. The early days were written during the 2015 AoC period but the later ones were done several years later when I decided it was time to finish it all off properly.
 
 ## C#
 
