@@ -15,7 +15,7 @@ enum class Opcode {
 };
 
 struct Instruction {
-    Opcode Opcode;
+    Opcode Op;
     char RegA, RegB;
     int ValA, ValB;
 };
@@ -71,7 +71,7 @@ int run_program(std::vector<Instruction>& instructions, int initRegA) {
     while (ip < icount) {
         Instruction inst = instructions[ip];
         int reg;
-        switch (inst.Opcode) {
+        switch (inst.Op) {
             case Opcode::hlf:
                 reg = reg_to_index(inst.RegA);
                 registers[reg] /= 2;
@@ -99,7 +99,7 @@ int run_program(std::vector<Instruction>& instructions, int initRegA) {
                 ip += (registers[reg] == 1) ? inst.ValB : 1;
                 break;
             default:
-                std::cout << "Unknown instruction at ip=" << ip << ", Opcode=" << (int)inst.Opcode << "\n";
+                std::cout << "Unknown instruction at ip=" << ip << ", Opcode=" << (int)inst.Op << "\n";
         }
     }
 
