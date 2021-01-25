@@ -1,7 +1,9 @@
 #include <numeric>
-#include <limits>
+#include <climits>
 #include <queue>
+#include <limits>
 #include <set>
+#include <vector>
 #include "aocutil.h"
 
 struct QueueItem {
@@ -20,8 +22,10 @@ long long int distribute_packages(std::vector<int>&, int);
 aoc_result_t day24()
 {
     std::vector<int> packages = get_input_ints(24, false);
-    auto part1 = distribute_packages(std::vector<int>{packages}, 3);
-    auto part2 = distribute_packages(std::vector<int>{packages}, 4);
+	auto pk1 = std::vector<int>{packages};
+    auto part1 = distribute_packages(pk1, 3);
+	auto pk2 = std::vector<int>{packages};
+    auto part2 = distribute_packages(pk2, 4);
     return {part1, part2};
 }
 

@@ -1,5 +1,6 @@
-#include <limits>
 #include <queue>
+#include <limits>
+#include <climits>
 #include "aocutil.h"
 
 //#define TEST
