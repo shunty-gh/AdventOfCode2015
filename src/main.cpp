@@ -77,4 +77,3 @@ aoc_result_t day09() { return {0,0}; }
 aoc_result_t day10() { return {0,0}; }
 aoc_result_t day11() { return {0,0}; }
 aoc_result_t day12() { return {0,0}; }
-aoc_result_t day25() { return {0,0}; }
