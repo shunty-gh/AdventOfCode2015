@@ -22,6 +22,7 @@ v0.2.2 20140504 Jose Santiago added compiler warning fixes.
 #define EZ_OPTION_PARSER_H
 
 #define _CRT_SECURE_NO_WARNINGS
+#pragma warning(disable : 4996)
 
 #include <vector>
 #include <stdlib.h>
